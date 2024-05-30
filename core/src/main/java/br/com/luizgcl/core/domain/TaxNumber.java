@@ -1,5 +1,8 @@
 package br.com.luizgcl.core.domain;
 
+import br.com.luizgcl.core.exception.TaxNumberException;
+import br.com.luizgcl.core.exception.enums.ErrorCodeEnum;
+
 public class TaxNumber {
     private String value;
 

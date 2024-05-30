@@ -1,5 +1,8 @@
 package br.com.luizgcl.core.domain;
 
+import br.com.luizgcl.core.exception.TransactionPinException;
+import br.com.luizgcl.core.exception.enums.ErrorCodeEnum;
+
 import java.time.LocalDateTime;
 
 public class TransactionPin {
@@ -43,8 +46,15 @@ public class TransactionPin {
         return pin;
     }
 
-    public void setPin(String pin) {
+    public void setPin(String pin) throws TransactionPinException {
+        this.isValid();
         this.pin = pin;
+    }
+
+    private void isValid() throws TransactionPinException {
+        if (this.pin.length() != 8) {
+            throw new TransactionPinException(ErrorCodeEnum.TRP0001.getMessage(), ErrorCodeEnum.TRP0001.getCode());
+        }
     }
 
     public Integer getAttempt() {
