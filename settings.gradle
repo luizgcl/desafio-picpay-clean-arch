@@ -1,0 +1,6 @@
+rootProject.name = 'desafio-picpay-clean-arch'
+include 'core'
+include 'usecase'
+include 'application'
+include 'infrastructure'
+
