@@ -30,6 +30,15 @@ public class TransactionPin {
         this.updatedAt = LocalDateTime.now();
     }
 
+    public TransactionPin(User user, String pin) {
+        this.user = user;
+        this.setPin(pin);
+        this.attempt = 3;
+        this.blocked = false;
+        this.createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
+    }
+
     public Long getId() {
         return id;
     }

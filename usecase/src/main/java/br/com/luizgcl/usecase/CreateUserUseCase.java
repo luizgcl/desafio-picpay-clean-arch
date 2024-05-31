@@ -4,5 +4,5 @@ import br.com.luizgcl.core.domain.User;
 
 public interface CreateUserUseCase {
 
-    void execute(User user);
+    void execute(User user, String pin);
 }
