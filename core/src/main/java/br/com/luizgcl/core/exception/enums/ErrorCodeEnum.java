@@ -3,6 +3,8 @@ package br.com.luizgcl.core.exception.enums;
 public enum ErrorCodeEnum {
 
     ON0001("Invalid Tax Number", "ON-0001"),
+    ON0002("Tax Number unavailable", "ON-0002"),
+    ON0003("Email unavailable", "ON-0003"),
     TR0001("User type Shopkeeper cannot make transfer", "TR-0001"),
     TR0002("Balance unavailable", "TR-0002"),
     TRP0001("Invalid Transaction Pin", "TRP-0001")
